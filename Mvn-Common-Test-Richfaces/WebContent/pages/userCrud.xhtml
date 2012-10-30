@@ -1,0 +1,70 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:a4j="http://richfaces.org/a4j">
+
+
+	<h:head>
+		<title>Inicio</title>
+
+	</h:head>
+	<div align="center">
+		<h:form>
+		<a4j:status onstart="#{rich:component('statPane')}.show()" onstop="#{rich:component('statPane')}.hide()" />
+			<rich:panel style="width:400px">
+				<f:facet name="header">
+					<h:outputText value="Users Gestion" />
+				</f:facet>
+				<rich:dataTable value="#{userDataBean.userList}" var="user"
+					iterationStatusVar="it" id="table" >
+					<rich:column>
+						<f:facet name="header">#</f:facet>
+                #{it.index}
+            </rich:column>
+					<rich:column>
+						<f:facet name="header">Users</f:facet>
+						<h:outputText value="#{user.user}" />
+					</rich:column>
+					<rich:column style="text-align:center">
+						<f:facet name="header">Operations</f:facet>
+						<a4j:commandLink styleClass="no-decor" action="#{userGestionBean.doDeleteUserNavigation}" >
+							<h:graphicImage value="/images/delete.gif" alt="delete" />
+							<f:setPropertyActionListener
+								target="#{userGestionBean.selectedUser.id}" value="#{user.id}" />
+							<f:setPropertyActionListener target="#{userGestionBean.action}"
+								value="delete" />
+						</a4j:commandLink>
+						<a4j:commandLink styleClass="no-decor"
+							action="#{userGestionBean.doUpdateUserNavigation}">
+							<h:graphicImage value="/images/edit.gif" alt="Edit User" />
+							<f:setPropertyActionListener
+								target="#{userGestionBean.selectedUser.id}" value="#{user.id}" />
+							<f:setPropertyActionListener target="#{userGestionBean.action}"
+								value="edit" />
+						</a4j:commandLink>
+					</rich:column>
+					<rich:column style="text-align:center">
+						<f:facet name="header">Roles</f:facet>
+						<h:commandLink styleClass="no-decor"
+							action="#{userGestionBean.doUpdateRoleNavigation}">
+							<h:graphicImage value="/images/edit.gif" alt="Edit Roles" />
+							<f:setPropertyActionListener
+								target="#{userGestionBean.selectedUser.id}" value="#{user.id}" />
+						</h:commandLink>
+					</rich:column>
+				</rich:dataTable>
+				<h:commandLink styleClass="no-decor"
+					action="#{userGestionBean.doNewUserNavigation}">
+					<h:graphicImage value="/images/create_doc.gif" alt="Create" />
+					<f:setPropertyActionListener target="#{userGestionBean.action}"
+						value="new" />
+				</h:commandLink>
+				<rich:popupPanel id="statPane" autosized="true">
+            		Please wait...
+        		</rich:popupPanel>
+			</rich:panel>
+		</h:form>
+	</div>
+</ui:composition>

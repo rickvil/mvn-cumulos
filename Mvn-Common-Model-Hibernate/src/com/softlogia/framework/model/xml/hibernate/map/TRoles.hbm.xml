@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.softlogia.framework.domain.Role" table="ROLES"
+		 lazy="true">
+		<id name="id" type="java.lang.Long">
+			<column name="ID" precision="22" scale="0" />
+			<generator class="sequence">
+				<param name="sequence">T_ROLES_SEQ</param>
+			</generator>
+		</id>
+		<property name="name" type="string">
+			<column name="NOMBRE" length="20" />
+		</property>
+		<property name="permissions" type="string">
+			<column name="PERMISOS" length="100" />
+		</property>
+		<set inverse="false" name="usersList" table="USUARIO_ROL">
+			<key>
+				<column name="ID_ROL" precision="22" scale="0" />
+			</key>
+			<many-to-many entity-name="com.softlogia.framework.domain.User">
+				<column name="ID_USUARIO" precision="22" scale="0" />
+			</many-to-many>
+		</set>
+		<component name="auditoria" class="com.softlogia.framework.domain.Auditoria">
+			<property name="usuarioCreacion" type="string">
+				<column name="USUARIO_CREACION" length="40" />
+			</property>
+			<property name="fechaCreacion" type="date">
+				<column name="FECHA_CREACION" length="7" />
+			</property>
+			<property name="usuarioModificacion" type="string">
+				<column name="USUARIO_MODIFICACION" length="40" />
+			</property>
+			<property name="fechaModificacion" type="date">
+				<column name="FECHA_MODIFICACION" length="7" />
+			</property>
+		</component>
+	</class>
+</hibernate-mapping>

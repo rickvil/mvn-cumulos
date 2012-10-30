@@ -2,12 +2,18 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.softlogia.stock</groupId>
-  <artifactId>Mvn-Stock</artifactId>
-  <version>1.0</version>
-  <packaging>pom</packaging>
+	<parent>
+		<groupId>com.softlogia.stock</groupId>
+		<artifactId>Mvn-Stock</artifactId>
+		<version>1.0</version>
+	</parent>
 
-  <name>Mvn-Stock</name>
+  <groupId>com.softlogia.stock</groupId>
+  <artifactId>Mvn-Common-Domain</artifactId>
+  <version>1.0</version>
+  <packaging>jar</packaging>
+
+  <name>Mvn-Common-Domain</name>
   <url>http://maven.apache.org</url>
 
   <properties>
@@ -23,12 +29,11 @@
     </dependency>
   </dependencies>
   
-
-  <modules>
-    <module>Mvn-Common-Domain</module>
-	<module>Mvn-Common-Model-Hibernate</module>
-	<module>Mvn-Common-Test-Richfaces</module>
-	
-  </modules>
-  
+  <repositories>
+        <repository>
+                <id>Softlogia</id>
+                <name>Softlogia Repository</name>
+                <url>http://www.softlogia.net/nexus/content/repositories/central/</url>
+        </repository>
+	</repositories>
 </project>

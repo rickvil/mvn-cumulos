@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<!-- DEFINICION DE BEANS DAO -->
+	<bean id="userDao" class="com.softlogia.framework.model.dao.impl.UserDaoImpl">
+		<property name="sessionFactory" ref="mySessionFactory" />
+	</bean>
+	<bean id="roleDao" class="com.softlogia.framework.model.dao.impl.RoleDaoImpl">
+		<property name="sessionFactory" ref="mySessionFactory" />
+	</bean>
+	
+	<!-- DEFINICION DE FACADE -->
+	<bean id="proyectoServices" class="com.softlogia.framework.model.services.ProyectoServices">
+		<property name="userService" ref="userService" />
+	</bean>
+	
+	<!-- DEFINICION DE CONTROLLERS -->
+	<bean id="userService" class="com.softlogia.framework.model.services.UserService">
+	<property name="userDao" ref="userDao" />
+	<property name="roleDao" ref="roleDao" />
+	</bean>
+
+</beans>

@@ -1,0 +1,34 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:a4j="http://richfaces.org/a4j">
+
+	<h:head>
+		<title>Inicio</title>
+
+	</h:head>
+	<f:event listener="#{userGestionBean.doCargarUserForm}" type="preRenderView" />
+	<div align="center">
+		<h:form>
+			<rich:panel style="width:400px" >
+				<f:facet name="header">
+					<h:outputText value="User Admin" />
+				</f:facet>
+				<h:panelGrid columns="2">
+					<h:outputText value="User: " />
+					<rich:inplaceInput defaultLabel="User"
+						value="#{userGestionBean.selectedUser.user}" />
+					<h:outputText value="Password:" />
+					<rich:inplaceInput defaultLabel="Password"
+						value="#{userGestionBean.selectedUser.password}" />
+				</h:panelGrid>	
+				<h:inputHidden value="#{userGestionBean.selectedUser.id}"/>			
+				<h:inputHidden value="#{userGestionBean.action}"/>
+			</rich:panel>
+			<a4j:commandButton value="#{userGestionBean.action}" action="#{userGestionBean.doOperation}" />			
+			<a4j:commandButton value="Cancel" action="userCrud.xhtml?faces-redirect=true"/>
+		</h:form>
+	</div>
+</ui:composition>

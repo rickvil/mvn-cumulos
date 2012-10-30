@@ -1,0 +1,116 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  
+	<parent>
+		<groupId>com.softlogia.stock</groupId>
+		<artifactId>Mvn-Stock</artifactId>
+		<version>1.0</version>
+	</parent>
+
+  <groupId>com.softlogia.stock</groupId>
+  <artifactId>Mvn-Common-Test-Richfaces</artifactId>
+  <packaging>war</packaging>
+  <version>1.0</version>
+  <name>Mvn-Common-Test-Richfaces Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+	
+	<!-- *cssparser-0.9.7 -->
+<dependency>
+	<groupId>net.sourceforge.cssparser</groupId>
+	<artifactId>cssparser</artifactId>
+	<version>0.9.7</version>
+</dependency>
+            
+<!-- *guava-13.0.1 -->
+<dependency>
+	<groupId>com.google.guava</groupId>
+	<artifactId>guava</artifactId>
+	<version>13.0.1</version>
+</dependency>
+            
+<!-- *jsf-api -->
+<dependency>
+	<groupId>javax.faces</groupId>
+	<artifactId>jsf-api</artifactId>
+	<version>2.0</version>
+</dependency>
+
+<!-- *jsf-impl -->
+<dependency>
+	<groupId>javax.faces</groupId>
+	<artifactId>jsf-impl</artifactId>
+	<version>1.2_15</version>
+</dependency>
+
+<!-- *richfaces-components-api-4.2.2.Final -->
+<dependency>
+	<groupId>org.richfaces.ui</groupId>
+	<artifactId>richfaces-components-api</artifactId>
+	<version>4.2.2.Final</version>
+</dependency>
+            
+<!-- *richfaces-components-ui-4.2.2.Final -->
+<dependency>
+	<groupId>org.richfaces.ui</groupId>
+	<artifactId>richfaces-components-ui</artifactId>
+	<version>4.2.2.Final</version>
+</dependency>
+            
+<!-- *richfaces-core-api-4.2.2.Final -->
+<dependency>
+	<groupId>org.richfaces.core</groupId>
+	<artifactId>richfaces-core-api</artifactId>
+	<version>4.2.2.Final</version>
+</dependency>
+            
+<!-- *richfaces-core-impl-4.2.2.Final -->
+<dependency>
+	<groupId>org.richfaces.core</groupId>
+	<artifactId>richfaces-core-impl</artifactId>
+	<version>4.2.2.Final</version>
+</dependency>
+            
+<!-- *sac-1.3 -->
+<dependency>
+	<groupId>org.w3c.css</groupId>
+	<artifactId>sac</artifactId>
+	<version>1.3</version>
+</dependency>
+
+<!-- dependencia entre proyectos -->
+<dependency>
+	<groupId>com.softlogia</groupId>
+	<artifactId>Mvn-Common-Domain</artifactId>
+	<version>1.0</version>
+</dependency>
+
+<dependency>
+	<groupId>com.softlogia</groupId>
+	<artifactId>Mvn-Common-Model-Hibernate</artifactId>
+	<version>1.0</version>
+</dependency>
+
+
+	
+  </dependencies>
+  
+  <repositories>
+        <repository>
+                <id>Softlogia</id>
+                <name>Softlogia Repository</name>
+                <url>http://www.softlogia.net/nexus/content/groups/public/</url>
+        </repository>
+	</repositories>
+
+  <build>
+    <finalName>Mvn-Common-Test-Richfaces</finalName>
+  </build>
+</project>

@@ -1,0 +1,50 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:a4j="http://richfaces.org/a4j">
+
+	<h:head>
+		<title>Inicio</title>
+	</h:head>
+	<f:event listener="#{roleGestionBean.doCargarRoleForm}"
+		type="preRenderView" />
+	<f:event listener="#{roleDataBean.doCargarRoleForm}"
+		type="preRenderView" />
+	<div align="center">
+		<h:form id="form">
+			<h:inputHidden value="#{roleGestionBean.selectedUser.id}"/>
+			<rich:dataTable value="#{roleDataBean.roleList}" var="role"
+				iterationStatusVar="it" id="tableRole">
+				<rich:column>
+					<f:facet name="header">#</f:facet>
+                	#{it.index}
+            	</rich:column>
+				<rich:column>
+					<f:facet name="header">Users</f:facet>
+					<h:outputText value="#{role.name}" />
+				</rich:column>
+				<rich:column style="text-align:center"> 
+					<f:facet name="header">Operations</f:facet>
+					<h:commandLink styleClass="no-decor" render="tableRole" action="#{roleGestionBean.doDeleteRole}">
+							<h:graphicImage value="/images/delete.gif" alt="Edit Roles" />
+							<f:setPropertyActionListener
+								target="#{roleGestionBean.selectedRole.id}" value="#{role.id}" />
+					</h:commandLink>
+				</rich:column>
+			</rich:dataTable>
+			<rich:select value="#{roleGestionBean.idRole}">
+				<f:selectItem itemValue="-1" itemLabel="Add All" />
+				<f:selectItems value="#{roleDataBean.roleListParticular}" var="role" itemValue="#{role.id}" itemLabel="#{role.name}"/>
+			</rich:select> 
+			<h:panelGrid columns="2" >
+				<h:commandButton value="Add Role" 
+					action="#{roleGestionBean.doAddRole}" />				
+			</h:panelGrid>
+		</h:form>
+		<h:form>
+			<h:commandButton value="Cancel" action="userCrud.xhtml?faces-redirect=true"/>
+		</h:form>
+	</div>
+</ui:composition>

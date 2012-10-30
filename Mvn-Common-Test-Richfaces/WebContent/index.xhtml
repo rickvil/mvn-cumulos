@@ -1,0 +1,29 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:rich="http://richfaces.org/rich"
+	xmlns:a4j="http://richfaces.org/a4j">
+
+
+	<h:head>
+		<title>Inicio</title>
+
+	</h:head>
+	<div align="center">
+		<h:form>
+			<rich:panel style="width:400px">
+				<f:facet name="header">
+					<h:outputText value="login"></h:outputText>
+				</f:facet>
+				<h:panelGrid columns="2">
+					<h:outputText value="User: " />
+					<h:inputText value="#{loginBean.user}" />
+					<h:outputText value="Password:" />
+					<h:inputSecret value="#{loginBean.password}" />
+				</h:panelGrid>
+				<a4j:commandButton action="#{loginBean.doLogin}" value="Login" />
+			</rich:panel>
+		</h:form>
+	</div>
+</ui:composition>
