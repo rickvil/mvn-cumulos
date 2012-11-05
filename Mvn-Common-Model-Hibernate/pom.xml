@@ -136,7 +136,7 @@
 		<dependency>
   <groupId>com.oracle</groupId>
   <artifactId>ojdbc6</artifactId>
-  <version>11.2.0.3</version>
+  <version>11.2.0</version>
 </dependency>
 
 
@@ -220,7 +220,7 @@
 		</dependency>
 <!-- dependencias entre proyectos-->
 		<dependency>
-			<groupId>com.softlogia</groupId>
+			<groupId>com.softlogia.stock</groupId>
 			<artifactId>Mvn-Common-Domain</artifactId>
 			<version>1.0</version>
 		</dependency>

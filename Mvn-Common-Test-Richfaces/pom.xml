@@ -87,13 +87,13 @@
 
 <!-- dependencia entre proyectos -->
 <dependency>
-	<groupId>com.softlogia</groupId>
+	<groupId>com.softlogia.stock</groupId>
 	<artifactId>Mvn-Common-Domain</artifactId>
 	<version>1.0</version>
 </dependency>
 
 <dependency>
-	<groupId>com.softlogia</groupId>
+	<groupId>com.softlogia.stock</groupId>
 	<artifactId>Mvn-Common-Model-Hibernate</artifactId>
 	<version>1.0</version>
 </dependency>
