@@ -98,7 +98,6 @@ public class UserService {
 	 * @return
 	 */
 	private List<Role> removeRol(Long idRol,List<Role> roles) {				
-		la concha de tu hermana, tomas el cambio jenkins?
 		List<Role> finalList = new ArrayList<Role>();
 		for (int i = 0; i < roles.size(); i++) {
 			if (roles.get(i).getId()!=null && (roles.get(i).getId()-idRol)!=0) {
