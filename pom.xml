@@ -1,39 +1,40 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+	<modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.softlogia.stock</groupId>
-  <artifactId>Mvn-Stock</artifactId>
-  <version>1.0</version>
-  <packaging>pom</packaging>
-  <name>Mvn-Stock</name>
-  <url>http://maven.apache.org</url>
+	<groupId>com.softlogia.stock</groupId>
+	<artifactId>Mvn-Stock</artifactId>
+	<version>1.0</version>
+	<packaging>pom</packaging>
+	<name>Mvn-Stock</name>
+	<url>http://maven.apache.org</url>
   
-  <modules>
-    <module>Mvn-Common-Domain</module>
-	<module>Mvn-Common-Model-Hibernate</module>
-	<module>Mvn-Common-Test-Richfaces</module>
-  </modules>
+	<modules>
+		<module>Mvn-Common-Domain</module>
+		<module>Mvn-Common-Model-Hibernate</module>
+		<module>Mvn-Common-Test-Richfaces</module>
+	 </modules>
 
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	<compileSource>1.6</compileSource>
-    <compileTarget>1.6</compileTarget>
-  </properties>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<compileSource>1.6</compileSource>
+		<compileTarget>1.6</compileTarget>
+		<org.junit.version>3.8.1</org.junit.version>>
+	</properties>
 
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
-  </dependencies>
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${org.junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
 
   
-  <build>
-        <plugins>
-            <plugin>
+    <build>
+		<plugins>
+			<plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <configuration>
@@ -46,9 +47,9 @@
 	
 	<repositories>
         <repository>
-                <id>Softlogia</id>
-                <name>Softlogia Repository</name>
-                <url>http://www.softlogia.net/nexus/content/groups/public/</url>
+            <id>Softlogia</id>
+            <name>Softlogia Repository</name>
+            <url>http://www.softlogia.net/nexus/content/groups/public/</url>
         </repository>
 	</repositories>
   
