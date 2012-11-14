@@ -92,7 +92,7 @@ public class UserService {
 	}
 
 	/**
-	 * Retoma la lista de roles que el usuario no poseé
+	 * Retoma la lista de roles que el usuario no pose
 	 * 
 	 * @param idUser
 	 * @return
@@ -109,7 +109,7 @@ public class UserService {
 	}
 	
 	/**
-	 * Retoma la lista de roles que el usuario no poseé
+	 * Retoma la lista de roles que el usuario no poseï¿½
 	 * 
 	 * @param idUser
 	 * @return
@@ -295,7 +295,7 @@ public class UserService {
 
 	// METODOS GETTER Y SETTER PARA DAOs
 	/**
-	 * Accede al dao, no se recomienda su uso. Empleado para inyección de
+	 * Accede al dao, no se recomienda su uso. Empleado para inyecciï¿½n de
 	 * dependencias con Spring Framework
 	 * 
 	 * @return
@@ -305,7 +305,7 @@ public class UserService {
 	}
 
 	/**
-	 * Accede al dao, no se recomienda su uso. Empleado para inyección de
+	 * Accede al dao, no se recomienda su uso. Empleado para inyecciï¿½n de
 	 * dependencias con Spring Framework
 	 * 
 	 * @return
@@ -315,7 +315,7 @@ public class UserService {
 	}
 
 	/**
-	 * Accede al dao, no se recomienda su uso. Empleado para inyección de
+	 * Accede al dao, no se recomienda su uso. Empleado para inyecciï¿½n de
 	 * dependencias con Spring Framework
 	 * 
 	 * @param userDao
@@ -325,7 +325,7 @@ public class UserService {
 	}
 
 	/**
-	 * Accede al dao, no se recomienda su uso. Empleado para inyección de
+	 * Accede al dao, no se recomienda su uso. Empleado para inyecciï¿½n de
 	 * dependencias con Spring Framework
 	 * 
 	 * @param rolDao
