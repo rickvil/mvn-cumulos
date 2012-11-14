@@ -92,7 +92,7 @@ public class UserService {
 	}
 
 	/**
-	 * Retoma la lista de roles que el usuario no poseËÉé
+	 * Retoma la lista de roles que el usuario no pose
 	 * 
 	 * @param idUser
 	 * @return
