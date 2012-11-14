@@ -20,6 +20,7 @@
 		<compileSource>1.6</compileSource>
 		<compileTarget>1.6</compileTarget>
 		<org.junit.version>3.8.1</org.junit.version>
+		<maven.compiler.plugin.version>2.5.1</maven.compiler.plugin.version>
 	</properties>
 
 	<dependencies>
@@ -37,6 +38,7 @@
 			<plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven.compiler.plugin.version}</version>
                 <configuration>
                     <source>${compileSource}</source>
                     <target>${compileTarget}</target>
