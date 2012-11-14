@@ -33,7 +33,7 @@ public abstract class BaseDaoImpl<T extends BaseDomain> extends HibernateDaoSupp
 
 
 	/**
-	 * Realiza la eliminación de un objeto
+	 * Realiza la eliminacion de un objeto
 	 * @param object
 	 */
 	public void delete(T object) {
