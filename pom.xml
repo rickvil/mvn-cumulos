@@ -8,7 +8,9 @@
 	<packaging>pom</packaging>
 	<name>Mvn-Stock</name>
 	<url>http://maven.apache.org</url>
-  
+	
+	Mando fruta!!! para testear jenkins.
+   
 	<modules>
 		<module>Mvn-Common-Domain</module>
 		<module>Mvn-Common-Model-Hibernate</module>
