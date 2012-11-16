@@ -102,13 +102,13 @@
 	
   </dependencies>
   
-  <repositories>
+  <!--repositories>
         <repository>
                 <id>Softlogia</id>
                 <name>Softlogia Repository</name>
                 <url>http://www.softlogia.net/nexus/content/groups/public/</url>
         </repository>
-	</repositories>
+	</repositories-->
 
   <build>
     <finalName>Mvn-Common-Test-Richfaces</finalName>

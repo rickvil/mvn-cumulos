@@ -29,11 +29,11 @@
     </dependency>
   </dependencies>
   
-  <repositories>
+  <!--repositories>
         <repository>
                 <id>Softlogia</id>
                 <name>Softlogia Repository</name>
                 <url>http://www.softlogia.net/nexus/content/repositories/central/</url>
         </repository>
-	</repositories>
+	</repositories-->
 </project>
