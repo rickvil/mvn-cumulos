@@ -21,7 +21,7 @@
 		<compileTarget>1.6</compileTarget>
 		<org.junit.version>3.8.1</org.junit.version>
 		<maven.compiler.plugin.version>2.5.1</maven.compiler.plugin.version>
-	</properties>
+	</properties>--
 
 	<dependencies>
 		<dependency>
@@ -30,7 +30,7 @@
 			<version>${org.junit.version}</version>
 			<scope>test</scope>
 		</dependency>
-	</dependencies>
+	</dependencies>--
   
     <build>
 		<plugins>
